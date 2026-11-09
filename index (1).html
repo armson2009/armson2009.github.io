@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saioua Connecté — Wi-Fi public à Saioua</title>
+<meta name="description" content="Saioua Connecté : Wi-Fi public par tickets (1 jour à 1 mois), abonnement Wi-Fi à domicile et Wi-Fi pour hôtels et commerces à Saioua, Côte d'Ivoire. Paiement par Mobile Money.">
+<meta name="theme-color" content="#0e2620">
+<meta property="og:title" content="Saioua Connecté — Wi-Fi public à Saioua">
+<meta property="og:description" content="Choisissez un forfait, payez par Mobile Money et recevez votre code Wi-Fi tout de suite.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201024%201024%22%3E%3Crect%20width%3D%221024%22%20height%3D%221024%22%20rx%3D%22180%22%20fill%3D%22%230e2620%22%2F%3E%3Cg%20transform%3D%22translate%280%20205%29%20scale%281%29%22%3E%3Cpath%20d%3D%22M%20296.2%20291.6%20A%20300%20300%200%200%201%20727.8%20291.6%22%20fill%3D%22none%22%20stroke%3D%22%23e8a33d%22%20stroke-width%3D%2246%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M%20364.5%20357.6%20A%20205%20205%200%200%201%20659.5%20357.6%22%20fill%3D%22none%22%20stroke%3D%22%23f2e7d2%22%20stroke-width%3D%2246%22%20stroke-linecap%3D%22round%22%2F%3E%3Cpath%20d%3D%22M%20431.4%20422.2%20A%20112%20112%200%200%201%20592.6%20422.2%22%20fill%3D%22none%22%20stroke%3D%22%23c1502e%22%20stroke-width%3D%2246%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%22512%22%20cy%3D%22500%22%20r%3D%2238%22%20fill%3D%22%23e8a33d%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+<style>
+  :root {
+    --vert: #0e2620;
+    --vert2: #14795a;
+    --terre: #c1502e;
+    --or: #e8a33d;
+    --creme: #f2e7d2;
+    --texte: #f6f1e6;
+    --doux: #b9c7bf;
+    --carte: #153629;
+    --trait: rgba(242, 231, 210, .16);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; color-scheme: dark; }
+  body {
+    margin: 0;
+    background-color: var(--vert);
+    background-image:
+      radial-gradient(circle at 12% 0%, rgba(193, 80, 46, .26), transparent 42%),
+      radial-gradient(circle at 96% 55%, rgba(20, 121, 90, .38), transparent 46%);
+    background-repeat: no-repeat;
+    color: var(--texte);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+  a { color: var(--or); }
+  header { padding: 18px 0 6px; }
+  .marque { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 20px; letter-spacing: -.3px; }
+  .marque svg { width: 48px; height: 37px; flex: none; }
+  .marque span em { font-style: normal; color: var(--or); }
+
+  .hero { padding-top: 34px; padding-bottom: 30px; }
+  .etiquette { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .4px; text-transform: uppercase; color: var(--or); margin-bottom: 12px; }
+  h1 { margin: 0 0 14px; font-size: clamp(32px, 8.4vw, 52px); line-height: 1.08; letter-spacing: -1px; font-weight: 800; }
+  h1 em { font-style: normal; color: var(--or); }
+  .hero p { margin: 0 0 22px; font-size: 18px; color: var(--creme); max-width: 560px; }
+  .boutons { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-block; text-decoration: none; padding: 14px 22px; border-radius: 12px; font-weight: 800; font-size: 16px; }
+  .btn.or { background: var(--or); color: #1b1307; }
+  .btn.contour { border: 1.5px solid rgba(242, 231, 210, .4); color: var(--texte); }
+
+  .frise { height: 12px; background: repeating-linear-gradient(90deg, var(--terre) 0 40px, var(--or) 40px 64px, var(--creme) 64px 78px, var(--vert2) 78px 118px, var(--or) 118px 142px); }
+
+  section { padding: 38px 0 6px; }
+  h2 { margin: 0 0 8px; font-size: 27px; letter-spacing: -.4px; font-weight: 800; }
+  .intro { margin: 0 0 20px; color: var(--doux); }
+
+  .prix { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .forfait { background: var(--carte); border: 1px solid var(--trait); border-radius: 16px; padding: 18px 16px; }
+  .forfait .duree { font-weight: 700; color: var(--creme); }
+  .forfait .montant { font-size: 30px; font-weight: 800; color: var(--or); letter-spacing: -1px; line-height: 1.2; margin: 4px 0 2px; white-space: nowrap; }
+  .forfait .montant small { font-size: 15px; font-weight: 700; margin-left: 4px; letter-spacing: 0; }
+  .forfait .detail { font-size: 14px; color: var(--doux); }
+  .note { margin: 14px 0 0; font-size: 14px; color: var(--doux); }
+
+  ol.etapes { list-style: none; counter-reset: e; margin: 0; padding: 0; display: grid; gap: 12px; }
+  ol.etapes li { counter-increment: e; display: flex; gap: 14px; align-items: flex-start; background: var(--carte); border: 1px solid var(--trait); border-radius: 16px; padding: 14px 16px; }
+  ol.etapes li::before { content: counter(e); flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--terre); color: #fff; font-weight: 800; display: grid; place-items: center; }
+  ol.etapes li span { padding-top: 4px; }
+
+  .services { display: grid; gap: 12px; }
+  .service { background: var(--carte); border: 1px solid var(--trait); border-radius: 16px; padding: 18px 18px 16px; }
+  .service h3 { margin: 0 0 6px; font-size: 19px; color: var(--creme); }
+  .service p { margin: 0; color: var(--doux); }
+
+  .garanties { display: grid; gap: 12px; }
+  .garantie { border-left: 4px solid var(--vert2); padding: 2px 0 2px 14px; }
+  .garantie h3 { margin: 0 0 4px; font-size: 17px; color: var(--creme); }
+  .garantie p { margin: 0; color: var(--doux); }
+
+  .contact { background: var(--carte); border: 1px solid var(--trait); border-radius: 16px; padding: 6px 18px; }
+  .ligne { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; padding: 14px 0; border-bottom: 1px solid var(--trait); }
+  .ligne:last-child { border-bottom: 0; }
+  .ligne b { color: var(--creme); }
+  .ligne a { font-weight: 700; }
+
+  footer { margin-top: 44px; padding: 22px 0 34px; border-top: 1px solid var(--trait); color: var(--doux); font-size: 14px; }
+
+  @media (min-width: 720px) {
+    .prix { grid-template-columns: repeat(4, 1fr); }
+    .services { grid-template-columns: repeat(3, 1fr); }
+    .garanties { grid-template-columns: repeat(3, 1fr); }
+    .hero { padding-top: 56px; padding-bottom: 44px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="marque">
+      <svg viewBox="268 168 488 378" role="img" aria-label="Logo Saioua Connecté" xmlns="http://www.w3.org/2000/svg"><path d="M 296.2 291.6 A 300 300 0 0 1 727.8 291.6" fill="none" stroke="#e8a33d" stroke-width="46" stroke-linecap="round"/><path d="M 364.5 357.6 A 205 205 0 0 1 659.5 357.6" fill="none" stroke="#f2e7d2" stroke-width="46" stroke-linecap="round"/><path d="M 431.4 422.2 A 112 112 0 0 1 592.6 422.2" fill="none" stroke="#c1502e" stroke-width="46" stroke-linecap="round"/><circle cx="512" cy="500" r="38" fill="#e8a33d"/></svg>
+      <span>Saioua <em>Connecté</em></span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="etiquette">Wi-Fi public à Saioua · connexion Starlink</span>
+    <h1>Internet par Wi-Fi, <em>simple</em> et sans surprise.</h1>
+    <p>Connectez-vous au réseau Wi-Fi Saioua Connecté, choisissez votre forfait, payez par Mobile Money et recevez votre code de connexion immédiatement.</p>
+    <div class="boutons">
+      <a class="btn or" href="#forfaits">Voir les forfaits</a>
+      <a class="btn contour" href="#contact">Nous contacter</a>
+    </div>
+  </div>
+  <div class="frise" aria-hidden="true"></div>
+
+  <div class="wrap">
+
+    <section id="forfaits">
+      <h2>Forfaits Wi-Fi</h2>
+      <p class="intro">Un code personnel, valable pour la durée choisie, sur le téléphone, la tablette ou l'ordinateur de votre choix.</p>
+      <div class="prix">
+        <div class="forfait"><div class="duree">1 jour</div><div class="montant">350<small>F CFA</small></div><div class="detail">Données illimitées</div></div>
+        <div class="forfait"><div class="duree">3 jours</div><div class="montant">600<small>F CFA</small></div><div class="detail">Données illimitées</div></div>
+        <div class="forfait"><div class="duree">1 semaine</div><div class="montant">1 100<small>F CFA</small></div><div class="detail">Données illimitées</div></div>
+        <div class="forfait"><div class="duree">1 mois</div><div class="montant">3 100<small>F CFA</small></div><div class="detail">Données illimitées</div></div>
+      </div>
+      <p class="note">Prix de l'achat en ligne par Mobile Money. Débit jusqu'à 20 Mb/s en réception par appareil.</p>
+    </section>
+
+    <section id="fonctionnement">
+      <h2>Comment ça marche</h2>
+      <p class="intro">Quatre étapes, directement depuis votre téléphone.</p>
+      <ol class="etapes">
+        <li><span>Connectez-vous au Wi-Fi « Saioua Connecté » depuis votre appareil.</span></li>
+        <li><span>La page d'achat s'ouvre : choisissez votre forfait.</span></li>
+        <li><span>Payez par Mobile Money (Orange Money, MTN MoMo ou Wave).</span></li>
+        <li><span>Votre code s'affiche à l'écran : connectez-vous et profitez d'internet.</span></li>
+      </ol>
+    </section>
+
+    <section id="services">
+      <h2>Nos services</h2>
+      <p class="intro">Saioua Connecté apporte internet là où la connexion manquait.</p>
+      <div class="services">
+        <div class="service"><h3>Wi-Fi par tickets</h3><p>Un code valable 1 jour, 3 jours, 1 semaine ou 1 mois pour vous connecter au réseau public de Saioua.</p></div>
+        <div class="service"><h3>Wi-Fi à la maison</h3><p>Un abonnement mensuel pour avoir internet chez vous, grâce à une antenne longue portée installée par nos soins.</p></div>
+        <div class="service"><h3>Hôtels et commerces</h3><p>Un réseau Wi-Fi avec votre propre page de connexion et des forfaits adaptés à vos clients.</p></div>
+      </div>
+    </section>
+
+    <section id="paiement">
+      <h2>Paiement et assistance</h2>
+      <p class="intro">Payer doit rester simple et rassurant.</p>
+      <div class="garanties">
+        <div class="garantie"><h3>Paiement sécurisé</h3><p>Le paiement se fait sur la page de nos partenaires de paiement agréés. Nous ne voyons jamais votre code secret Mobile Money.</p></div>
+        <div class="garantie"><h3>Code immédiat</h3><p>Dès que le paiement est confirmé, votre code s'affiche à l'écran et vous pouvez vous connecter.</p></div>
+        <div class="garantie"><h3>Un souci ?</h3><p>Si vous avez payé sans recevoir de code, contactez-nous avec le numéro utilisé et l'heure du paiement. Après vérification, nous vous renvoyons votre code ou nous vous remboursons.</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="intro">Une question, un problème de connexion ou une demande d'installation ? Écrivez-nous ou appelez-nous.</p>
+      <div class="contact">
+        <div class="ligne"><b>Téléphone</b><a href="tel:+2250584711452">+225 05 84 71 14 52</a></div>
+        <div class="ligne"><b>E-mail</b><a href="mailto:armson2009@gmail.com">armson2009@gmail.com</a></div>
+        <div class="ligne"><b>Zone de service</b><span>Saioua, Haut-Sassandra, Côte d'Ivoire</span></div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Saioua Connecté — Saioua, Haut-Sassandra, Côte d'Ivoire</div>
+</footer>
+
+</body>
+</html>
